@@ -1,6 +1,18 @@
 # Campus Management
-Software to manage room bookings on the TU Delft campus. Developed as a group project for the coruse *OOP Project*.
+Software to manage room bookings on the TU Delft campus. Developed as a group project for the course *OOP Project*.
 
+![Login Screen](/images/ss-login.png)
+![Reservation Screen](/images/ss-reserve.png)
+
+## Overview of structure
+![Reservation Screen](/images/diagram\%20overview.png)
+
+## Technologies used
+The product was developed using the Scrum development framework. The team used the following technologies:
+* Spring Boot with MySQL for the server-side.
+* JUnit 5 for unit testing.
+* JavaFX for the user interface.
+* Rest API with JSON for client-server communication.
 ## How to run it
 1.  Clone the repo
 2.  Run `/server/src/main/java/nl/tudelft/oopp/group31/ApplicationServer.java` and wait for initial configuration to complete
