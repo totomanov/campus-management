@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #1a1a1a;" stylesheets="/stylesheets/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.group31.controllers.AdminFoodManagerController">
+   <center>
+      <VBox prefHeight="667.0" prefWidth="1256.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </BorderPane.margin>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <VBox prefWidth="1256.0" style="-fx-background-color: #333333;">
+               <HBox prefHeight="50.0" style="-fx-background-color: #00A6D6;">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <padding>
+                     <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                  </padding>
+                  <Label prefWidth="1201.0" text="Add Food Item" textAlignment="RIGHT" textFill="#f5f5f5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <GridPane hgap="12.0" style="-fx-background-color: #333333;" vgap="12.0">
+                  <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     <ColumnConstraints maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <padding>
+                     <Insets bottom="12.0" />
+                  </padding>
+                  <Label text="Name" textFill="WHITE" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Price" textFill="WHITE" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="addFoodName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Building Name" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="addFoodPrice" prefWidth="87.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Description" textFill="WHITE" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="addFoodDescription" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ChoiceBox fx:id="addFoodBuildingDropdown" prefWidth="150.0" GridPane.columnIndex="1" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#submitAddFoodForm" prefHeight="94.0" prefWidth="120.0" styleClass="button-alt" text="Add" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </GridPane>
+               <HBox prefHeight="50.0" style="-fx-background-color: #00A6D6;">
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <padding>
+                     <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                  </padding>
+                  <children>
+                     <Label prefWidth="1201.0" text="Remove Food Item" textAlignment="RIGHT" textFill="#f5f5f5">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+               <GridPane hgap="12.0" style="-fx-background-color: #333333;" vgap="12.0">
+                  <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     <ColumnConstraints maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <padding>
+                     <Insets bottom="12.0" />
+                  </padding>
+                  <children>
+                     <Label text="Food" textFill="WHITE" GridPane.rowIndex="1">
+                        <padding>
+                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                        </padding>
+                     </Label>
+                     <ChoiceBox fx:id="removeFoodNameDropdown" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Button alignment="CENTER" mnemonicParsing="false" onAction="#submitRemoveFoodForm" prefHeight="94.0" prefWidth="120.0" styleClass="button-red" text="Remove" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Button>
+                     <Label text="Building Name" textFill="WHITE">
+                        <padding>
+                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                        </padding>
+                     </Label>
+                     <ChoiceBox fx:id="removeFoodBuildingDropdown" onAction="#createFoodList" prefWidth="150.0" GridPane.columnIndex="1" />
+                  </children>
+               </GridPane>
+            </VBox>
+         <Label fx:id="successLabel" prefHeight="41.0" prefWidth="1587.0" styleClass="label-success" textFill="WHITE">
+            <padding>
+               <Insets bottom="12.0" right="12.0" top="12.0" />
+            </padding>
+         </Label>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="50.0" style="-fx-background-color: #00A6D6;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#toggleHamburgerMenu" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/menu.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: none;">
+               <graphic>
+                  <Label alignment="CENTER" style="-fx-border-width: 0 0 0 0; -fx-border-color: white;" text="Campus Manager (Admin)">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: none;">
+               <graphic>
+                  <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="1.0" text="/">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#navigateToFoodManager" style="-fx-background-color: none;">
+               <graphic>
+                  <Label alignment="CENTER" text="Food Manager">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

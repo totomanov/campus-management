@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #1a1a1a;" stylesheets="/stylesheets/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.group31.controllers.AdminBikesManagerController">
+    <top>
+        <HBox prefHeight="50.0" style="-fx-background-color: #00A6D6;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+            </padding>
+            <Button fx:id="hamburgerButton" alignment="CENTER" mnemonicParsing="false" onAction="#toggleHamburgerMenu" style="-fx-background-color: none;">
+                <graphic>
+                    <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/icons/menu.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: none;">
+                <graphic>
+                    <Label alignment="CENTER" style="-fx-border-width: 0 0 0 0; -fx-border-color: white;" text="Campus Manager (Admin)">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                </graphic>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+         <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: none;">
+            <graphic>
+                  <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="1.0" text="/">
+                      <font>
+                          <Font name="System Bold" size="18.0" />
+                      </font>
+                  </Label>
+            </graphic>
+         </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: none;">
+            <graphic>
+                  <Label alignment="CENTER" text="Bikes Manager">
+                      <font>
+                          <Font name="System Bold" size="18.0" />
+                      </font>
+                  </Label>
+            </graphic></Button>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="764.0" prefWidth="1254.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+            </BorderPane.margin>
+            <Label prefHeight="32.0" prefWidth="1409.0" text="Current Rents">
+                <font>
+                    <Font name="System Bold" size="22.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="12.0" />
+                </VBox.margin>
+            </Label>
+            <TableView fx:id="users" prefHeight="145.0" prefWidth="336.0">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            <columns>
+               <TableColumn fx:id="user" prefWidth="236.0" text="User" />
+               <TableColumn fx:id="bikeBuilding" minWidth="0.0" prefWidth="214.0" text="Building" />
+            </columns>
+            </TableView>
+            <HBox alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="1254.0">
+                <VBox.margin>
+                    <Insets bottom="12.0" top="12.0" />
+                </VBox.margin>
+                <Button mnemonicParsing="false" onAction="#removeUserRent" styleClass="button-red" text="Remove" />
+            </HBox>
+            <Label prefHeight="0.0" prefWidth="1257.0" text="Buildings">
+                <font>
+                    <Font name="System Bold" size="22.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="12.0" />
+                </VBox.margin>
+            </Label>
+            <TableView fx:id="buildings" prefHeight="152.0" prefWidth="1256.0">
+                <columns>
+                    <TableColumn fx:id="building" minWidth="0.0" prefWidth="220.0" text="Building" />
+                    <TableColumn fx:id="bikeNumber" minWidth="0.0" prefWidth="231.0" text="Number of Bikes available" />
+                </columns>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </TableView>
+            <Label prefHeight="56.0" prefWidth="1256.0" text="Modify">
+                <font>
+                    <Font name="System Bold" size="22.0" />
+                </font>
+            </Label>
+            <GridPane hgap="12.0" vgap="12.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <Label prefHeight="33.0" prefWidth="120.0" text="Building" />
+                    <ChoiceBox fx:id="buildingList" onAction="#fillTextField" prefHeight="25.0" prefWidth="257.0">
+                        <HBox.margin>
+                            <Insets bottom="4.0" top="4.0" />
+                        </HBox.margin>
+                    </ChoiceBox>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                    <HBox prefHeight="39.0" prefWidth="422.0">
+                        <padding>
+                            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                        </padding>
+                        <Label prefHeight="31.0" prefWidth="140.0" text="Number of Bikes">
+                            <HBox.margin>
+                                <Insets right="12.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="num" prefHeight="25.0" prefWidth="130.0" promptText="0" />
+                    </HBox>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#modify" prefHeight="25.0" prefWidth="99.0" styleClass="button-alt" text="Modify" />
+                </HBox>
+            </GridPane>
+            <HBox prefHeight="20.0" prefWidth="1256.0" />
+            <GridPane hgap="12.0" vgap="12.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <HBox prefHeight="100.0" prefWidth="200.0" />
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                    <HBox prefHeight="39.0" prefWidth="422.0">
+                        <padding>
+                            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                        </padding>
+                    </HBox>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" />
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>

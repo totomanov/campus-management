@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import com.gluonhq.charm.glisten.control.TextField?> -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="nl.tudelft.oopp.group31.controllers.UserOverviewBuildingsController">
+   <content>
+      <BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="814.0" prefWidth="1280.0" style="-fx-background-color: #1a1a1a;" stylesheets="/stylesheets/style.css">
+         <center>
+            <VBox prefWidth="1256.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label text="Available Buildings">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </Label>
+                  <FlowPane fx:id="buildingParent" hgap="16.0" prefWidth="1233.0" rowValignment="TOP" vgap="16.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" maxWidth="800.0" style="-fx-background-color: #292929;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <VBox maxHeight="200.0" maxWidth="300.0" minHeight="200.0" minWidth="300.0" prefHeight="200.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/aula.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="200.0" maxWidth="600.0" minHeight="200.0" prefHeight="200.0">
+                                 <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="237.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: white;">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="233.0" text="Aula Auditorium" textAlignment="RIGHT">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="340.0" style="-fx-background-radius: 0 0 0 0;" text="4 rooms available">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <GridPane>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <HBox prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@images/icons/food.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER_RIGHT" text="Aula Cafeteria" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="30.0" prefWidth="233.0" GridPane.rowIndex="2">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <ImageView fitHeight="18.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@images/icons/disabled-access.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER_RIGHT" text="Accessible" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="30.0" prefWidth="328.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <ImageView fitHeight="18.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@images/icons/projector.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER_RIGHT" text="Projector" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="30.0" prefWidth="328.0" GridPane.rowIndex="1">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <ImageView fitHeight="18.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@images/icons/whiteboard.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER_RIGHT" text="Whiteboard" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="30.0" prefWidth="328.0">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <ImageView fitHeight="18.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@images/icons/whiteboard.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER_RIGHT" text="24 rooms" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="30.0" prefWidth="328.0" GridPane.columnIndex="1">
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <ImageView fitHeight="18.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="6.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@images/icons/person.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER_RIGHT" text="2 - 8 people" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="415.0">
+                                       <children>
+                                          <Button alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-width: 0; -fx-border-radius: 0;" text="More Details">
+                                             <HBox.margin>
+                                                <Insets right="16.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="button-alt" text="Book" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox prefHeight="50.0" style="-fx-background-color: #00A6D6;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#toggleHamburgerMenu" style="-fx-background-color: none;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#navigateToHome" prefHeight="26.0" style="-fx-background-color: none;">
+                     <graphic>
+                        <Label prefHeight="27.0" style="-fx-border-width: 0 0 0 0; -fx-border-color: white;" text="Campus Manager">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: none;">
+                     <graphic>
+                        <Label graphicTextGap="0.0" lineSpacing="1.0" text="/">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#navigateToBuildings" style="-fx-background-color: none;">
+                     <graphic>
+                        <Label prefHeight="27.0" style="-fx-border-width: 0 0 0 0; -fx-border-color: white;" text="Buildings">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <right>
+            <AnchorPane fx:id="showUp" prefHeight="700.0" prefWidth="532.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </content>
+</ScrollPane>

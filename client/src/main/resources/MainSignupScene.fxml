@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import com.gluonhq.charm.glisten.control.TextField?> -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600" minWidth="900" prefHeight="600.0" prefWidth="900.0" stylesheets="/stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.group31.controllers.SignUpSceneController">
+   <center>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="660.0" styleClass="login-pane" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="676.0" fitWidth="900.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/delft-university-of-technology-library5.jpg" />
+         </ImageView>
+         <Text fx:id="dailyTip" fill="WHITE" layoutX="40.0" layoutY="40.0" text="Daily tip:" wrappingWidth="167.850830078125" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#262729" height="608.0" layoutX="595.0" layoutY="-4.0" stroke="#262729" strokeType="INSIDE" width="305.0" />
+         <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="648.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/TUD-logo-white.png" />
+         </ImageView>
+         <Label layoutX="650.0" layoutY="168.0" prefHeight="17.0" prefWidth="109.0" text="Username (NetID)">
+         </Label>
+         <TextField fx:id="userName" layoutX="649.0" layoutY="185.0" prefHeight="25.0" prefWidth="200.0" />
+         <Label layoutX="650.0" layoutY="217.0" prefHeight="17.0" prefWidth="98.0" text="Password">
+         </Label>
+         <PasswordField fx:id="userPassword" layoutX="649.0" layoutY="235.0" prefHeight="25.0" prefWidth="200.0" />
+         <PasswordField fx:id="confirmPassword" layoutX="648.0" layoutY="287.0" prefHeight="25.0" prefWidth="200.0" />
+         <Button layoutX="648.0" layoutY="356.0" mnemonicParsing="false" onAction="#signupClicked" prefHeight="32.0" prefWidth="199.0" styleClass="button-alt" text="Sign up" />
+         <Label layoutX="649.0" layoutY="269.0" prefHeight="17.0" prefWidth="98.0" text="Confirm password" />
+         <Hyperlink layoutX="648.0" layoutY="326.0" onAction="#loginClicked" text="Already have an account? Log in." />
+         <Label fx:id="error" layoutX="649.0" layoutY="149.0" prefHeight="18.0" prefWidth="248.0" styleClass="label-error" stylesheets="@stylesheets/style.css" />
+      </AnchorPane>
+   </center>
+</BorderPane>

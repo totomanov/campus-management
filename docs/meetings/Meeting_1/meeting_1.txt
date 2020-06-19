@@ -1,0 +1,216 @@
+TA Meeting notes:
+
+The deadline of git is the 18th of February
+
+Mattermost Usernames:
+maikdevries
+caschutte
+cobameobiang
+Irentea
+avilakathara
+markoivanov
+ttotomanov
+
+
+
+
+Compiled notes of the meeting with the CTA:
+
+Must haves:
+
+The general idea of the application is that it is a program for managing buildings and rooms on the campus. When the user opens the application the user can sign up or log in. 
+A user can sign up with their netid/student number.  
+There are 3 different types of users: Admin, Employee and student. 
+
+When logged in the user will see a list of all the buildings and will be able to reserve a room in that building. The user will see some information about a building, such as opening hours.
+
+A room can be reserved in timeslots of 30 minutes / 60 minutes. A user can not reserve rooms with overlapping time slots. A room also has certain details, such as a capacity or having a projector. 
+
+The user will be able to see all reservations he or she has made in the past and in the future. 
+
+The rooms a user can see depends on their role. So a student is able to see different rooms than an employee.
+
+The admin should be able to change anything. Such as, descriptions of a building, capacity of a room, add more rooms, add a building.
+
+An admin is able to cancel any reservation.
+
+An admin is able to block reservations for a certain amount of time. 
+
+
+
+
+Nice to haves:
+
+The user is able to filter rooms based on certain properties
+
+A teacher can have multiple rooms reserved at the same time
+
+Each building has a food store with it’s own reservation system. This system allows a user to order food and pick it up at a certain location.
+
+The user is able to cancel a reservation.
+
+
+
+Followup questions
+
+Is there a maximum time a user can reserve a room for? For example an entire day?
+
+Do we have to create a server application and connect the client application to the server application to get its data?
+
+Are we allowed to use http requests?
+
+
+
+
+
+Questions asked/answered during meeting with CTA (uncompiled)
+
+Questions for CTA:
+
+
+Any ui recommendations?
+	Menu location? Top left?
+	Colour scheme?
+	Modern?
+	
+
+
+Authentication?
+	Design?
+
+What is it supposed to do?
+	
+
+The scope of the program?
+	How many users?
+
+
+What kind of users? 
+	Different access levels? 
+		If so, what does each role need to be able to do?
+
+What campus? Just Delft?
+
+
+Do we need to be able to add multiple campuses?
+
+
+What needs to be managed?
+	Buildings?
+	Coffeemachines?
+
+
+Uptime?
+	24/7?
+
+Availability?
+	Desktop app
+	Website?
+
+
+Offline functionality?
+
+Real time?
+
+
+Can the user add buildings for example?
+
+
+Can there be a queue? For example can you queue to access a room?
+
+
+Multiple language support?
+
+
+
+
+
+
+gENERAL IDEA
+
+
+Campus managment software, Manually go to the building to book lecture hall 
+
+
+Available rooms in building
+
+
+Sign in/sign up
+Certain buildings that hold certain rooms, opening hours, timeslots
+
+User overview all reservations, future and past
+
+Be able to book a room
+
+
+
+NICE TZO  HAVE food store in every building with a menu/ food reservation system
+
+
+Option to cancel? Yes, not required
+
+Admin can create buildings, edit the whole system, cancel reservations of other users.
+
+Different roles: sutdents should have different access rights than employees, rooms should have a role(?) e.g. drebbelweg is an exam room
+
+A booking is a booking
+
+
+Booking at the same time not allowed
+
+
+show/not show rooms not applicable to students 
+
+If someone doesnt show up, admin should cancel the booking
+
+Can only book before the time of slot
+
+
+Nice to have feature: Teacher is allowed to book multiple rooms at the same time, students only 1
+
+Rooms have a capacity, does it have a whiteboard? Projector e.g.
+
+
+Nice to have: filtering based on room specifications
+
+Employee, admin, teacher roles. 
+
+
+Authentication, as little data as possible, studentnumber/netid, not be able to delete account
+
+
+No penalty for not showing up to reserverd rooms
+
+Make it “not ugly”
+
+Create an API, only allowed language is java
+
+Auto refresh/button
+
+Food thign has its own menu, link it to reserved room
+
+
+2 to 4 weeks reservation in the future
+
+Admin can block certain periods e.g. holiday ADDITIONAL
+
+Admin can change anything
+
+
+MORE:
+
+Calendar view of reservations
+
+
+
+
+
+
+
+
+
+
+
+
+
+

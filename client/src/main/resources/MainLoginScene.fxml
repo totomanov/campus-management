@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <?import com.gluonhq.charm.glisten.control.TextField?> -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600" minWidth="900" prefHeight="600.0" prefWidth="900.0" stylesheets="/stylesheets/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.group31.controllers.LoginSceneController">
+   <center>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="660.0" styleClass="login-pane" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="676.0" fitWidth="900.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/delft-university-of-technology-library5.jpg" />
+         </ImageView>
+         <Text fx:id="dailyTip" fill="WHITE" layoutX="605.0" layoutY="44.0" text="Daily tip:" wrappingWidth="167.850830078125" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#262729" height="608.0" layoutX="-7.0" layoutY="-5.0" stroke="#262729" strokeType="INSIDE" width="305.0" />
+         <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="49.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/TUD-logo-white.png" />
+         </ImageView>
+         <Label layoutX="49.0" layoutY="169.0" prefHeight="17.0" prefWidth="109.0" text="Username" />
+         <TextField fx:id="userName" layoutX="48.0" layoutY="186.0" prefHeight="25.0" prefWidth="200.0" />
+         <Label layoutX="49.0" layoutY="218.0" prefHeight="17.0" prefWidth="98.0" text="Password" />
+         <PasswordField fx:id="userPassword" layoutX="48.0" layoutY="236.0" prefHeight="25.0" prefWidth="200.0" />
+         <Hyperlink  layoutX="44.0" layoutY="270.0" onAction="#signUpClicked" prefHeight="23.0" prefWidth="203.0" text="Don't have an account? Sign up." />
+         <Button fx:id="loginButton" layoutX="48.0" layoutY="306.0" mnemonicParsing="false" onAction="#loginClicked" prefHeight="32.0" prefWidth="200.0" styleClass="button-alt" text="Log in" />
+         <Label fx:id="error" layoutX="43.0" layoutY="150.0" prefHeight="18.0" prefWidth="225.0" styleClass="label-error" />
+      </AnchorPane>
+   </center>
+</BorderPane>

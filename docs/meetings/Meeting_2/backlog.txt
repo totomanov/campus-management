@@ -1,0 +1,39 @@
+Must haves:
+
+User can sign up
+User can log in
+Create 3 types of users: Admins, Teachers and regular Users
+Admin can add a room
+Admin can add a building
+User can reserve a room
+	Only during opening hours
+	A maximum of 4 hours
+	Room reservations are not allowed to overlap 
+	30 minute time slots
+Admin can remove a reservation
+User can view all the buildings
+	A teacher sees different rooms than a regular user
+User can see all the rooms of a building
+User can see an overview of all his reservations
+Admin can change details of a building
+Admin can change details of a room
+User can see details of a building
+	Address 
+	Opening hours 
+	Amount of rooms
+User can see details of a room
+	Capacity
+	Having a projector
+	Accessibility
+User can see a calendar overview of his reservations
+Admin can block reservations for a certain amount of time
+
+
+
+Nice to haves:
+User is able to order food in each building
+Bike rental service per building
+The user is able to cancel reservations
+User is able to filter the rooms displayed
+Teacher user is able to reserve multiple rooms at the same time
+

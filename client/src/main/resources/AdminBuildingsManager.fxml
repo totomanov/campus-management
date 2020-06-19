@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #1a1a1a;" stylesheets="/stylesheets/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.group31.controllers.AdminBuildingsManagerController">
+   <center>
+      <VBox prefHeight="667.0" prefWidth="1256.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </BorderPane.margin>
+         <children>
+            <VBox prefWidth="1256.0" style="-fx-background-color: #333333;">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="1299.0" style="-fx-background-color: #00A6D6;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="1201.0" text="Add Building" textAlignment="RIGHT" textFill="#f5f5f5">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox maxWidth="1.7976931348623157E308">
+                     <children>
+                        <GridPane hgap="12.0" prefHeight="139.0" prefWidth="1256.0" style="-fx-background-color: #333333;" vgap="12.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="32.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="32.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="27.0" />
+                              <ColumnConstraints maxWidth="1.7976931348623157E308" percentWidth="19.0" />
+                              <ColumnConstraints maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="17.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="41.0" minHeight="30.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <padding>
+                              <Insets bottom="12.0" />
+                           </padding>
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label text="Description" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="Building Name" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="addBuildingName" prefHeight="17.0" prefWidth="371.0" GridPane.columnIndex="1" />
+                              <Label text="Working Hours " textFill="WHITE" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                 </padding>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="openingHour" prefHeight="25.0" prefWidth="43.0" />
+                                    <Label alignment="CENTER" text=":">
+                                       <padding>
+                                          <Insets left="4.0" right="4.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="openingMinute" prefHeight="25.0" prefWidth="43.0" />
+                                    <Label alignment="CENTER" prefHeight="17.0" prefWidth="42.0" text="—">
+                                       <padding>
+                                          <Insets left="8.0" right="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="closingHour" prefHeight="25.0" prefWidth="43.0" />
+                                    <Label alignment="CENTER" text=":">
+                                       <padding>
+                                          <Insets left="4.0" right="4.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="closingMinute" prefHeight="25.0" prefWidth="43.0" />
+                                 </children>
+                              </HBox>
+                              <TextArea fx:id="buildingDescription" prefHeight="53.0" prefWidth="571.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#submitAddBuildingForm" prefHeight="94.0" prefWidth="120.0" styleClass="button-alt" text="Add" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="successLabelAdd" prefHeight="45.0" prefWidth="324.0" styleClass="label-success" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets bottom="12.0" right="12.0" top="12.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <HBox prefWidth="1299.0" style="-fx-background-color: #00A6D6;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                     <children>
+                        <Label prefWidth="1201.0" text="Edit Building" textAlignment="RIGHT" textFill="#f5f5f5">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <GridPane hgap="12.0" prefHeight="186.0" prefWidth="1256.0" style="-fx-background-color: #333333;" vgap="12.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                        <ColumnConstraints maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <padding>
+                        <Insets bottom="12.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Building" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#submitEditBuildingForm" prefHeight="94.0" prefWidth="120.0" styleClass="button-alt" text="Modify" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="12.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#submitDeleteBuildingForm" prefHeight="94.0" prefWidth="120.0" styleClass="button-red" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Label text="Description" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label text="Building Name" textFill="WHITE" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                           </padding>
+                        </Label>
+                        <TextArea fx:id="editBuildingDescription" prefHeight="53.0" prefWidth="571.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label text="Working Hours " textFill="WHITE" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <TextField fx:id="editOpeningHour" prefHeight="25.0" prefWidth="43.0" />
+                              <Label alignment="CENTER" text=":">
+                                 <padding>
+                                    <Insets left="4.0" right="4.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="editOpeningMinute" prefHeight="25.0" prefWidth="43.0" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="42.0" text="—">
+                                 <padding>
+                                    <Insets left="8.0" right="8.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="editClosingHour" prefHeight="25.0" prefWidth="43.0" />
+                              <Label alignment="CENTER" text=":">
+                                 <padding>
+                                    <Insets left="4.0" right="4.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="editClosingMinute" prefHeight="25.0" prefWidth="43.0" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="editBuildingName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ChoiceBox fx:id="editBuildingDropdown" onAction="#populateEditForm" prefHeight="31.0" prefWidth="341.0" GridPane.columnIndex="1" />
+                        <Label fx:id="successLabelEdit" prefHeight="45.0" prefWidth="296.0" styleClass="label-success" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets bottom="12.0" right="12.0" top="12.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="50.0" style="-fx-background-color: #00A6D6;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#toggleHamburgerMenu" style="-fx-background-color: none;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/menu.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: none;">
+               <graphic>
+                  <Label alignment="CENTER" style="-fx-border-width: 0 0 0 0; -fx-border-color: white;" text="Campus Manager (Admin)" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: none;">
+               <graphic>
+                  <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="1.0" text="/" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#navigateToRooms" style="-fx-background-color: none;">
+               <graphic>
+                  <Label alignment="CENTER" text="Bulding Manager" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

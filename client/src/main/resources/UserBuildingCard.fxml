@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="card" alignment="TOP_CENTER" maxWidth="800.0" style="-fx-background-color: #292929;" stylesheets="/stylesheets/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.oopp.group31.controllers.BuildingCardController">
+    <VBox fx:id="child1" maxHeight="200.0" maxWidth="300.0" minHeight="200.0" minWidth="300.0" prefHeight="200.0" prefWidth="300.0">
+        <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@/images/aula.jpg" />
+        </ImageView>
+    </VBox>
+    <VBox fx:id="child2" maxHeight="200.0" maxWidth="600.0" minHeight="200.0" prefHeight="200.0">
+        <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+        </padding>
+        <HBox prefHeight="30.0" prefWidth="237.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: white;">
+            <Label fx:id="buildingName" prefHeight="27.0" prefWidth="580.0" text="Aula Auditorium" textAlignment="RIGHT">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+        </HBox>
+         <HBox prefHeight="30.0" prefWidth="328.0">
+             <padding>
+                 <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+             </padding>
+             <ImageView fitHeight="18.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                 <HBox.margin>
+                     <Insets right="6.0" />
+                 </HBox.margin>
+                 <Image url="@images/icons/time.png" />
+             </ImageView>
+             <Label fx:id="openingHour" alignment="CENTER_RIGHT" textAlignment="RIGHT" />
+             <Label alignment="CENTER_RIGHT" text=" - " textAlignment="RIGHT" />
+             <Label fx:id="closingHour" alignment="CENTER_RIGHT" textAlignment="RIGHT" />
+         </HBox>
+      <Label fx:id="buildingDescription" alignment="TOP_LEFT" prefHeight="94.0" prefWidth="414.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+        <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="415.0">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#book" prefHeight="30.0" prefWidth="120.0" styleClass="button-alt" text="Book" />
+        </HBox>
+    </VBox>
+</HBox>

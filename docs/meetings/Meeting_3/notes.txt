@@ -1,0 +1,17 @@
+Make sure to properly close the connection to the database. 
+
+Host the database locally
+
+Assign a person to an issue
+
+
+Add a weight to an issue, the weight follow the fibonacci sequence 
+
+Change the weight after finishing the issue, for an accurate representation of the time spent
+
+
+Create a task in Gradle to run the server and de client at the same time
+
+We could host the database on Heroku. They support Postgres 
+
+We get a higher grade if we make the soft deadline for reserving rooms.

@@ -1,0 +1,21 @@
+We should create an agenda for each TA meeting. There should be a template for this.
+This agenda should be finished before the lunch break on monday, but preferably on sunday. We should push it to the repo combined with the notes we took during that meeting.
+
+There is an upcoming (soft) deadline of 1 working endpoint. This endpoint does not need to be one of the requirements. This working endpoint needs to be merged to the master branch. 
+
+This week we need to discuss which frameworks, type of database, etc, we want to use.
+
+We should divide the work in front end and back end
+
+We need to figure out how the dummy application works. (the template)
+
+We need to get the dummy application running on our own machines
+
+Before pushing your changes run the command “gradle check”. This runs the CI pipeline locally.
+
+On the issues board, move everything from “to do” to “open”. Only put stuff in open that is scheduled for this week.
+
+Split up the “must haves” based on priority.
+
+
+

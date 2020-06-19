@@ -1,0 +1,11 @@
+Calendar automatically load current month
+
+Editing opening hours is broken -> editing buildings in general
+
+Admin cannot change number of bikes
+
+Find a way to store the entered info by users on calendar
+
+Change getmonth to hashmap, also setdates
+
+User interface -> campus manager breaks the view
